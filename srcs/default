@@ -19,12 +19,12 @@ server {
 	ssl on;
 	ssl_certificate		/etc/ssl/localhost.pem;
 	ssl_certificate_key	/etc/ssl/localhost.key;	
-	
-    	
-	index index.php index.html index.htm index.nginx-debian.html;
+		
+	index index.php index.html index.htm;
+
+	autoindex on;
 
 	location / {
-		autoindex on;
 		try_files $uri $uri/ =404;
 	}
 
